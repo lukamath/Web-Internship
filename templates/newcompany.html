@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 align="center">{% block title %} Nuova Struttura {% endblock %}</h1>
+
+<div class='company-form' align="center">
+    <form method="post">
+        <input type="text" name="companyname"
+               placeholder="Nome Struttura"
+               value="{{ request.form['companyname'] }}"></input>
+        <br><br>
+        <input type="text" name="companytype"
+               placeholder="Tipo Struttura"
+               value="{{ request.form['companytype'] }}"></input>
+        <br><br>
+        <input type="text" name="companyzone"
+               placeholder="Zona Struttura"
+               value="{{ request.form['companyzone'] }}"></input>
+        <br><br><br>    
+        <button type="submit">Aggiungi</button>
+    </form>
+</div>
+
+{% endblock %}

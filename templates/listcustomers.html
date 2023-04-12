@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='course'>
+       <h1>Lista Customers</h1>
+        <table class='list-tab'>
+              <tr><th>ID</th><th>Username</th><th>Password</th><th>ID Corso</th>
+        {% for customer in customers %}     
+            <tr>
+                <td><b>{{ customer['id'] }}</td><td>{{ customer['username'] }}</td><td>{{ customer['password'] }}</td>              
+                <td>{{ customer['idcorso']}}</td>
+            </tr>
+        {% endfor %} 
+        </table>
+</div>
+
+{% endblock %}

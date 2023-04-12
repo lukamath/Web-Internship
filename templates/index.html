@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 align="center">{% block title %} Tool Assegnazione Tirocinio {% endblock %}</h1>
+
+<div class='course'>
+       <h1>Lista Strutture</h1>
+        <table class='list-tab'>
+              <tr><th>ID Struttura</th><th>Tipo Struttura</th><th>Denominazione</th><th>Zona</th>
+        {% for company in companies %}     
+            <tr>
+                <td><b>{{ company['id'] }}</td><td>{{ company['company_type'] }}</td><td>{{ company['company_name'] }}</td>
+                <td>{{ company['zone'] }}</td>
+            </tr>
+        {% endfor %} 
+        </table>
+</div>
+
+{% endblock %}
